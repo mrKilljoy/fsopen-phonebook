@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
-    "build:ui": "rm -rf dist && cd ../../../p-2/e-2.6-2.17/phonebook && npm run build && cp -r dist ../../../p-3/e.3.1-3.8/node_task"
+    "build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "K.R.",
   "license": "ISC",
